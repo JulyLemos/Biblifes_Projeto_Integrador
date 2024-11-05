@@ -12,6 +12,17 @@ SQL_INSERIR = """
     VALUES (?, ?)
 """
 
+SQL_ALTERAR_USUARIO = """
+    UPDATE usuario SET
+    matricula=?, cpf=?
+    WHERE id=?
+"""
+
+SQL_EXCLUIR_USUARIO = """
+    DELETE FROM usuario
+    WHERE id=?
+"""
+
 SQL_OBTER_TODOS = """
     SELECT id, matricula, cpf
     FROM usuario
